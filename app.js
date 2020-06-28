@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const axios = require("axios");
 const cheerio = require("cheerio");
-const port = 3000;
+const port = process.env.PORT;
 
 const getQuote = async ticker => {
     const rsp = await axios.get(`https://web.tmxmoney.com/quote.php?qm_symbol=${ticker}`);
