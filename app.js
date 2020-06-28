@@ -58,4 +58,8 @@ app.get("/:ticker", async (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+    res.json("Hello World");
+});
+
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
